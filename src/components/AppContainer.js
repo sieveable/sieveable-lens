@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Header from './Header';
-import App from './App';
+import Footer from './Footer';
 
-const AppContainer = function app() {
+const AppContainer = function appContainer(props) {
   return (
     <div>
       <Header />
       <div className="container-fluid">
-        <App />
+        {props.children}
       </div>
+      <Footer />
     </div>
-    );
+  );
 };
-
+AppContainer.propTypes = {
+  children: PropTypes.node
+};
 export default AppContainer;

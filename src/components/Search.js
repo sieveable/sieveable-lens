@@ -22,7 +22,4 @@ const SearchComponent = function searchComponent() {
   );
 };
 
-SearchComponent.defaultProps = {
-};
-
 export default SearchComponent;

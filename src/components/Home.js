@@ -1,13 +1,10 @@
 import React from 'react';
 import SearchComponent from './Search';
 
-const AppComponent = function app() {
+const HomeComponent = function homeComponent() {
   return (
     <SearchComponent />
   );
 };
 
-AppComponent.defaultProps = {
-};
-
-export default AppComponent;
+export default HomeComponent;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, IndexLink } from 'react-router';
 
 class HeaderComponent extends Component {
   constructor() {
@@ -26,10 +27,10 @@ class HeaderComponent extends Component {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a
+            <IndexLink
               onClick={() => this.setActiveClassName('home')}
-              className="navbar-brand" href="#"
-            >Sieveable for Android</a>
+              className="navbar-brand" to="/"
+            >Sieveable for Android</IndexLink>
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
@@ -37,15 +38,15 @@ class HeaderComponent extends Component {
                 onClick={() => this.setActiveClassName('ui')}
                 className={(this.state.activeClassName === 'ui') ? 'active' : ''}
               >
-                <a href="#"> UI & Design
+                <Link to="/ui">UI & Design
                   <span className="sr-only">(current)</span>
-                </a>
+                </Link>
               </li>
               <li
                 onClick={() => this.setActiveClassName('dev')}
                 className={(this.state.activeClassName === 'dev') ? 'active' : ''}
               >
-                <a href="#">Dev & Tools</a>
+                <Link to="/dev">Dev & Tools</Link>
               </li>
             </ul>
           </div>
