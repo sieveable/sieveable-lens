@@ -1,0 +1,20 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "comma-dangle" : [0, "never"],
+      "prefer-rest-params": 0,
+      "react/jsx-filename-extension": 0,
+      "jsx-a11y/href-no-hash": [ 0, "Link" ]
+    },
+    "globals": {
+      "document": false
+    }
+}

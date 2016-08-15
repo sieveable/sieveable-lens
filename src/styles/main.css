@@ -1,0 +1,10 @@
+#search-box {
+  font-family: 'Open Sans';
+  color: #FFF;
+  background-color: #333;
+  opacity: 0.85;
+  min-height: 400px;
+}
+.search-form {
+margin-top: 10%;
+}

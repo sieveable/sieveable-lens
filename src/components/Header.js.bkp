@@ -1,0 +1,28 @@
+import React, { Component } from 'react';
+
+class HeaderComponent extends Component {
+  constructor() {
+    super(...arguments);
+    this.state = {
+      showNavbar: false
+    };
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+  }
+  toggleNavbar() {
+    this.setState({ showNavbar: !this.state.showNavbar });
+  }
+  render() {
+    return (
+      <ul className={this.state.showNavbar ? 'topnav responsive' : 'topnav'} id="myTopnav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#ui">UI and Design</a></li>
+        <li><a href="#dev">Dev and Tools</a></li>
+        <li><a href="#apps">Top Apps</a></li>
+        <li className="icon">
+          <a href="#" onClick={this.toggleNavbar}>&#9776;</a>
+        </li>
+      </ul>
+    );
+  }
+}
+export default HeaderComponent;
